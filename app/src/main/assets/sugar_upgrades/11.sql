@@ -1,0 +1,1 @@
+alter table BEVERAGE add BEV_ICON TEXT;

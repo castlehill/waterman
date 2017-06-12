@@ -1,0 +1,1 @@
+alter table DRINK add BEV_ID LONG;

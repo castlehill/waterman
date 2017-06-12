@@ -28,7 +28,7 @@ public class Drink extends SugarRecord {
         this.dateTime = dateTime;
     }
 
-    public int getAmount() {
+    public double getAmount() {
         return amount;
     }
 
@@ -44,7 +44,7 @@ public class Drink extends SugarRecord {
         this.unit = unit;
     }
 
-    int amount;
+    double amount;
     String unit;
 
 public Drink(){
@@ -57,7 +57,7 @@ public Drink(){
 
     }
 
-    public Drink(String dateTime, int amount, String unit, long bevID){
+    public Drink(String dateTime, double amount, String unit, long bevID){
         this.dateTime = dateTime;
         this.amount = amount;
         this.unit = unit;

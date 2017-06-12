@@ -76,6 +76,9 @@ public class DrinkAdapter extends BaseAdapter {
         String sTime="";
         sTime=  d.getDateTime();
         sTime= sTime.substring(sTime.indexOf(' ') + 1);
+        // 09:11:56 AM
+        sTime = sTime.substring(0,5) + ' ' + sTime.substring(9,11);
+
 
         authorTextView.setText(sTime.replaceFirst("^0",""));
 

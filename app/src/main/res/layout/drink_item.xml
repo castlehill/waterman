@@ -11,6 +11,7 @@
 
         <ImageView
             android:id="@+id/ic_image1"
+            android:layout_gravity="center"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginRight="@dimen/margin_normal"
@@ -19,7 +20,7 @@
 
         <TextView
             android:id="@+id/textDesc"
-
+android:layout_gravity="center"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignTop="@+id/ic_image"

@@ -10,7 +10,6 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -30,7 +29,7 @@ public class DefaultDrinkDialog extends BottomSheetDialogFragment {
     public void onCancel(DialogInterface dialog)
     {
         super.onCancel(dialog);
-        Toast.makeText(getActivity(), "CANCEL", Toast.LENGTH_SHORT).show();
+       // Toast.makeText(getActivity(), "CANCEL", Toast.LENGTH_SHORT).show();
     }
 
     @Override

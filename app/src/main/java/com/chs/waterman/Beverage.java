@@ -38,11 +38,11 @@ int active;
         this.bevName = bevName;
     }
 
-    public int getBevAmount() {
+    public double getBevAmount() {
         return bevAmount;
     }
 
-    public void setBevAmount(int bevAmount) {
+    public void setBevAmount(double bevAmount) {
         this.bevAmount = bevAmount;
     }
 
@@ -55,7 +55,7 @@ int active;
     }
 
 
-    int bevAmount;
+    double bevAmount;
     String bevUnit;
 
 
@@ -66,7 +66,7 @@ public Beverage(){
 
 }
 
-    public Beverage(  String bevName, int bevAmount, String bevUnit , String bevIcon, int Active){
+    public Beverage(  String bevName, double bevAmount, String bevUnit , String bevIcon, int Active){
 
         this.bevName = bevName;
         this.bevAmount = bevAmount;

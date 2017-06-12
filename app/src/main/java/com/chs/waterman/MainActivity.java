@@ -148,12 +148,12 @@ public class MainActivity extends AppCompatActivity
 
         // Toast.makeText(this,"TODAY " + Integer.toString(drinks.size()) + " ", Toast.LENGTH_SHORT).show();
         ///total the drinks
-        long lgTotal = 0;
+        double dTotal = 0;
         for (Drink d : drinks) {
-            lgTotal = lgTotal + d.getAmount();
+            dTotal  = dTotal  + d.getAmount();
         }
         int iProgress = 0;
-        iProgress = (int) lgTotal;
+        iProgress = (int) dTotal ;
         //Toast.makeText(this,"Progress " + Integer.toString(iProgress) + " ", Toast.LENGTH_SHORT).show();
         //pbTarget.setProgress(iProgress);
         // pbTarget.setCurrent(iProgress,"h2o");
@@ -175,6 +175,12 @@ public class MainActivity extends AppCompatActivity
             public void onItemClick(AdapterView parent, View view, int position, long id) {
                 Drink drink= drinks2[position];
                 drink.doSomething();
+
+                EditDrinkDialog editDlg = new EditDrinkDialog();
+                editDlg.drink = drink;
+                BottomSheetBehavior mBottomSheetBehavior;
+
+                editDlg.show(getSupportFragmentManager(), "Custom Bottom Sheet");
 
                 // This tells the GridView to redraw itself
                 // in turn calling your BooksAdapter's getView method again for each cell
@@ -246,22 +252,17 @@ public class MainActivity extends AppCompatActivity
 
         //clear them out
          //Beverage.deleteAll(Beverage.class);
-        if (bevs.size() == 0) {
+       // if (bevs.size() == 0) {
             //public Beverage(String bevID, String bevName, int bevAmount, String bevUnit ){
-            Beverage b = new Beverage("8 oz", 8, "oz", "glass",1);
-            b.save();
-            b = new Beverage("12 oz", 12, "oz", "bottle_md",1);
-            b.save();
-
-            b = new Beverage("16 oz", 16, "oz", "bottle_md",1);
-            b.save();
-
-
-            b = new Beverage("22 oz", 22, "oz", "sports",1);
-            b.save();
+      //      Beverage b = new Beverage("Water", 8, "oz", "glass",1);
+      //      b.save();
+      //      b = new Beverage("Water", 16.9 , "oz", "bottle_md",1);
+       //     b.save();
+       //     b = new Beverage("Sports", 22, "oz", "sports",1);
+       //     b.save();
 
 
-        }
+      //  }
 
 
     }
